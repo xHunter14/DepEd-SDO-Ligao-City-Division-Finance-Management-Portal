@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DepEd Ligao City Division Finance Management Portal</title>
+    <meta
+      name="description"
+      content="A modern finance management portal for DepEd Ligao City Division, built for responsive access on all devices."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">
+        <img class="brand-logo" src="Images/DepEd SDO Ligao.png" alt="DepEd SDO Ligao logo" />
+        <span>
+          <strong>DepEd Ligao City</strong>
+          <small>Finance Management Portal</small>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#announcements">Announcements</a>
+        <a href="#reports">Reports</a>
+        <a href="#contact_form">Contact</a>
+        <a href="#access">Access</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+        🌙
+      </button>
+      <button class="button primary sign-in" type="button" data-modal-target="loginModal">Sign In</button>
+    </header>
+
+    <div class="modal-overlay" id="modalOverlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="Close dialog">×</button>
+        <h3 id="modalTitle">Details</h3>
+        <p id="modalContent">This section is temporarily unavailable.</p>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="loginModal" hidden>
+      <div class="modal login-modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="modal-close login-close" type="button" aria-label="Close login dialog">×</button>
+        <h3 id="loginTitle">Sign In</h3>
+        <p class="login-subtitle">Access the finance portal with your division credentials.</p>
+        <form class="login-form">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="loginEmail" required />
+
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="loginPassword" required />
+
+          <button class="button primary" type="submit">Log In</button>
+        </form>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Department of Education • Ligao City Division</p>
+          <h1>Empowering Education Through Transparent Fiscal Management</h1>
+          <p class="hero-copy">
+            Manage budgets, monitor disbursements, and stay updated with a secure
+            and transparent finance hub designed for public school administration.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#access">Access FMS Portal</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Core capabilities</p>
+          <h2>Everything finance teams need in one place.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="card">
+            <div class="feature-icon">🏫</div>
+            <h3>For School Heads</h3>
+            <p>Monitor liquidation status and track school MOOE updates in one place.</p>
+          </article>
+          <article class="card">
+            <div class="feature-icon">📋</div>
+            <h3>For BAC</h3>
+            <p>Digitize procurement requests and monitor the annual procurement plan with ease.</p>
+          </article>
+          <article class="card">
+            <div class="feature-icon">👩‍💼</div>
+            <h3>For Personnel</h3>
+            <p>Stay updated on remittances and view payroll status indicators at a glance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="section alt">
+        <div class="section-heading">
+          <p class="eyebrow">Support services</p>
+          <h2>Built for schools, accounting units, and district offices.</h2>
+        </div>
+        <div class="support-grid">
+          <div class="support-card">
+            <h3>School Transactions</h3>
+            <p>Track cash advances, reimbursements, and liquidation requests from any device.</p>
+          </div>
+          <div class="support-card">
+            <h3>Office Reporting</h3>
+            <p>Generate summaries for management review, implementation planning, and compliance.</p>
+          </div>
+          <div class="support-card">
+            <h3>Support Desk</h3>
+            <p>Connect with finance personnel for guidance, troubleshooting, and document follow-up.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="announcements" class="section alt">
+        <div class="section-heading">
+          <p class="eyebrow">Transparency notice</p>
+          <h2>Latest financial memos, updates, and fiscal guidelines.</h2>
+        </div>
+        <div class="announcement-panel">
+          <div class="announcement-item">
+            <h3>Division Financial Memoranda</h3>
+            <p>Download the latest issuance, circulars, and administrative guidelines for finance-related transactions.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="Division Financial Memoranda" data-content="Temporary notice: the latest division memos and circulars will be available here soon for download and review.">View Announcements</button>
+          </div>
+          <div class="announcement-item">
+            <h3>Fiscal Updates</h3>
+            <p>Stay informed on budget status, reporting requirements, and compliance reminders issued by the division.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="Fiscal Updates" data-content="Temporary notice: recent budget and compliance updates will be posted here as soon as they are released.">Read Updates</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="reports" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Reports</p>
+          <h2>Access key financial reports and monitoring summaries.</h2>
+        </div>
+        <div class="report-grid">
+          <article class="report-card">
+            <h3>Monthly Financial Report</h3>
+            <p>Review spending summaries, obligations, and budget utilization for the current month.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="Monthly Financial Report" data-content="Temporary preview: monthly financial summaries, obligations, and spending updates will appear here for review.">Download Report</button>
+          </article>
+          <article class="report-card">
+            <h3>Quarterly Performance Summary</h3>
+            <p>Track operational performance, cash flow, and finance compliance indicators.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="Quarterly Performance Summary" data-content="Temporary preview: quarterly monitoring results and performance indicators will be displayed here soon.">View Summary</button>
+          </article>
+          <article class="report-card">
+            <h3>Audit and Compliance Log</h3>
+            <p>Access documentation updates, review notes, and status records for audit readiness.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="Audit and Compliance Log" data-content="Temporary preview: audit notes, compliance records, and review history will be listed here for easy access.">Open Log</button>
+          </article>
+          <article class="report-card">
+            <h3>Transaction Categories Reference</h3>
+            <p>View standardized expense types, UACS codes, and transaction classifications for all personnel.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="Transaction Categories Reference" data-content="This checklist includes all approved expense types with their corresponding UACS codes and classifications for proper transaction recording and reporting.">View Reference</button>
+          </article>
+          <article class="report-card">
+            <h3>MOOE Travel Expense Checklist</h3>
+            <p>Complete documentation requirements for travel expense reimbursements and compliance verification.</p>
+            <button class="button secondary modal-trigger" type="button" data-title="MOOE Travel Expense Checklist" data-content="Required documentation checklist for travel expenses including disbursement vouchers, approved itineraries, travel orders, certificates of travel completion, and reimbursement receipts for proper processing and audit readiness.">View Checklist</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact_form" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Get in touch</p>
+          <h2>Have questions or need assistance? Reach out to us.</h2>
+        </div>
+        <div class="contact-card">
+          <form class="contact-form" action="#" method="post" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+              <div class="field-error" aria-live="polite"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+              <div class="field-error" aria-live="polite"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+              <div class="field-error" aria-live="polite"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <div class="field-error" aria-live="polite"></div>
+            </div>
+
+            <button type="submit" class="button primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="access" class="section">
+        <div class="cta-panel">
+          <div>
+            <p class="eyebrow">Ready to proceed?</p>
+            <h2>Log in and manage finance tasks with confidence.</h2>
+          </div>
+          <a class="button primary" href="#">Open Portal</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+      <div class="footer-links" aria-label="Footer navigation">
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#announcements">Announcements</a>
+        <a href="#reports">Reports</a>
+        <a href="#contact_form">Contact</a>
+        <a href="#access">Access</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-seals">
+          <img class="seal-logo" src="Images/20231028065531!Philippine_Transparency_Seal.svg" alt="Philippine Transparency Seal" />
+          <span>☑ Transparency Seal</span>
+          <span>☑ Public Accountability</span>
+        </div>
+        <p>© 2026 Department of Education • SDO Ligao City Division. All rights reserved.</p>
+        <p>For concerns, contact the Information Technology and Finance Sections of SDO Ligao City.</p>
+      </div>
+    </footer>
+  </body>
+</html>
